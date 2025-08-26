@@ -10,9 +10,7 @@ export default function Hero() {
 	});
 	const [accountNumber, setAccountNumber] = useState("");
 
-	const handleChange = (e) => {
-		setForm({ ...form, [e.target.name]: e.target.value });
-	};
+	
 
 	const generateAccountNumber = () => {
 		
@@ -20,7 +18,7 @@ export default function Hero() {
 	};
 
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		 e.preventDefault();
 		setAccountNumber(generateAccountNumber());
 	};
 
@@ -38,8 +36,7 @@ export default function Hero() {
 							type="text"
 							className="form-control"
 							name="firstname"
-							value={form.firstname}
-							onChange={handleChange}
+							
 							required
 						/>
 					</div>
@@ -49,8 +46,7 @@ export default function Hero() {
 							type="text"
 							className="form-control"
 							name="lastname"
-							value={form.lastname}
-							onChange={handleChange}
+							
 							required
 						/>
 					</div>
@@ -60,8 +56,7 @@ export default function Hero() {
 							type="email"
 							className="form-control"
 							name="email"
-							value={form.email}
-							onChange={handleChange}
+							
 							required
 						/>
 					</div>
@@ -71,8 +66,7 @@ export default function Hero() {
 							type="password"
 							className="form-control"
 							name="password"
-							value={form.password}
-							onChange={handleChange}
+							
 							required
 						/>
 					</div>
